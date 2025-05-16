@@ -49,7 +49,7 @@ EXPLAIN SELECT
 
 FROM Booking B
 JOIN User U ON B.user_id = U.user_id
-JOIN Property P ON B.property_id = P.property_id
+JOIN Property P ON B.property_id = P.property_id AND P.pricepernight > 0
 LEFT JOIN Payment PAY ON PAY.booking_id = B.booking_id;
 
 -- Query with filter to test index
