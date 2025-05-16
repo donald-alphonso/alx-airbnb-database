@@ -20,7 +20,9 @@ SELECT
 FROM 
     Property P
 LEFT JOIN 
-    Review R ON P.property_id = R.property_id;
+    Review R ON P.property_id = R.property_id
+ORDER BY
+	rating DESC;
 
 -- FULL OUTER JOIN: Retrieve all users and all bookings
 SELECT 
